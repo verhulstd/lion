@@ -1,7 +1,18 @@
-import '../styles/globals.css'
+import "../styles/styles.scss";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import { FronteggProvider } from "@frontegg/nextjs";
 
-export default MyApp
+//implementatie van login/register/password forget features
+//https://www.npmjs.com/package/@frontegg/nextjs
+const contextOptions = {
+  baseUrl: "https://app-6z839m383iw9.frontegg.com", // Your backend base URL (frontegg will direct the requests to it)
+};
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <FronteggProvider contextOptions={contextOptions}>
+      <Component {...pageProps} />
+    </FronteggProvider>
+  );
+};
+export default App;
