@@ -13,7 +13,7 @@ const Detail = ({
       </h1>
       <img src={regular} alt="" />
       <Link href="/fotos">
-        <button>go back</button>
+        <button>ga terug</button>
       </Link>
     </>
   );
